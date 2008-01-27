@@ -46,7 +46,7 @@ poszukiwane w katalogu $DATADIR/certs lub ~/.psi/certs.
 To prywatna modyfikacja Michała Jazłowieckiego.
 
 %prep
-%setup -q -n psi-%{version}-daisy-%{_rev}-src
+%setup -q -c
 %patch0 -p1
 rm -rf third-party
 
