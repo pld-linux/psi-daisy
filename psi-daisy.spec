@@ -56,13 +56,13 @@ chmod +x ./configure
 	--prefix=%{_prefix} \
 	--datadir=%{_datadir}
 
-qt4-qmake
+qmake-qt4
 %{__make}
 
 cd src/plugins/generic
 for pl in chess echo noughtsandcrosses python null; do
         cd $pl
-        qt4-qmake ${pl}plugin.pro
+        qmake-qt4 ${pl}plugin.pro
         make || die "make plugin ${pl} failed"
 	cd ..
 done
