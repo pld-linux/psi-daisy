@@ -1,13 +1,13 @@
-%define _rev 20080127
+%define _rev 20080210
 Summary:	Psi-Daisy - Jabber client
 Summary(pl.UTF-8):	Psi-Daisy - klient Jabbera
 Name:		psi-daisy
 Version:	0.12
-Release:	0.5.%{_rev}.0
+Release:	0.6.%{_rev}.0
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://uaznia.net/psi-daisy/Psi-%{version}/psi-%{version}-daisy-%{_rev}-src.zip
-# Source0-md5:	e6be74ac364b56eeb26aaa7267f67423
+# Source0-md5:	c804413d00ac83882d83220255037edd
 Patch0:		%{name}-configure_fix.patch
 URL:		http://psi-im.org/
 BuildRequires:	Qt3Support-devel
