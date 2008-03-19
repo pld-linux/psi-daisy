@@ -9,7 +9,7 @@ Group:		Applications/Communications
 Source0:	http://uaznia.net/psi-daisy/Psi-%{version}/psi-%{version}-daisy-%{_rev}-src.zip
 # Source0-md5:	fec5db067396d1bc1781b1b0149e559b
 Patch0:		%{name}-configure_fix.patch
-URL:		http://psi-im.org/
+URL:		http://psi-daisy.uaznia.net/
 BuildRequires:	Qt3Support-devel
 BuildRequires:	QtCore-devel
 BuildRequires:	QtDBus-devel
