@@ -20,6 +20,7 @@ BuildRequires:	libstdc++-devel
 BuildRequires:	openssl-devel >= 0.9.7c
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qt4-build
+BuildRequires:	qt4-linguist
 BuildRequires:	qt4-qmake
 #BuildRequires:	unrar
 BuildRequires:	unzip
@@ -39,10 +40,10 @@ certificates in $DATADIR/certs or in ~/.psi/certs.
 This is a private build made by Michał Jazłowiecki.
 
 %description -l pl.UTF-8
-Psi jest komunikatorem dla otwartego systemu wiadomoĹci Jabber.
-ZostaĹ stworzony w oparciu o bibliotekÄ Qt. Psi wspiera poĹÄczenia
-szyfrowane SSL i TLS. W stosunku do domyĹlnego zachowania komunikatora
-zostaĹa wprowadzona zmiana, ktĂłra powoduje Ĺźe certyfikaty SSL sÄ
+Psi jest komunikatorem dla otwartego systemu wiadomości Jabber.
+Został stworzony w oparciu o bibliotekę Qt. Psi wspiera połączenia
+szyfrowane SSL i TLS. W stosunku do domyślnego zachowania komunikatora
+została wprowadzona zmiana, która powoduje że certyfikaty SSL są
 poszukiwane w katalogu $DATADIR/certs lub ~/.psi/certs.
 To prywatna modyfikacja Michała Jazłowieckiego.
 
