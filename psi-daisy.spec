@@ -72,7 +72,7 @@ cd ../../..
 
 cd lang
 
-lrelease *.ts
+lrelease-qt4 *.ts
 
 %install
 rm -rf $RPM_BUILD_ROOT
