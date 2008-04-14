@@ -1,3 +1,4 @@
+# TODO: %lang() for *.qm files
 %define _rev 20080223
 Summary:	Psi-Daisy - Jabber client
 Summary(pl.UTF-8):	Psi-Daisy - klient Jabbera
@@ -37,15 +38,17 @@ Psi is a communicator for the Jabber open messaging system. It is
 based on the Qt library. It supports SSL and TLS encrypted connections. 
 The default behaviour for SSL was changed so that it looks for SSL
 certificates in $DATADIR/certs or in ~/.psi/certs.
-This is a private build made by Michał Jazłowiecki.
+
+psi-daisy is a private build made by Michał Jazłowiecki.
 
 %description -l pl.UTF-8
 Psi jest komunikatorem dla otwartego systemu wiadomości Jabber.
-Został stworzony w oparciu o bibliotekę Qt. Psi wspiera połączenia
+Został stworzony w oparciu o bibliotekę Qt. Psi obsługuje połączenia
 szyfrowane SSL i TLS. W stosunku do domyślnego zachowania komunikatora
 została wprowadzona zmiana, która powoduje że certyfikaty SSL są
 poszukiwane w katalogu $DATADIR/certs lub ~/.psi/certs.
-To prywatna modyfikacja Michała Jazłowieckiego.
+
+psi-daisy to prywatna modyfikacja Michała Jazłowieckiego.
 
 %prep
 %setup -q -c
@@ -65,7 +68,7 @@ cd src/plugins/generic
 for pl in chess echo noughtsandcrosses python null; do
         cd $pl
         qmake-qt4 ${pl}plugin.pro
-        make || die "make plugin ${pl} failed"
+        %{__make} || die "make plugin ${pl} failed"
 	cd ..
 done
 cd ../../..
