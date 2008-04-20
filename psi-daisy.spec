@@ -1,5 +1,5 @@
 # TODO: %lang() for *.qm files
-%define _rev 20080223
+%define _rev 20080417
 Summary:	Psi-Daisy - Jabber client
 Summary(pl.UTF-8):	Psi-Daisy - klient Jabbera
 Name:		psi-daisy
@@ -7,8 +7,8 @@ Version:	0.12
 Release:	0.6.%{_rev}.0
 License:	GPL v2
 Group:		Applications/Communications
-Source0:	http://uaznia.net/psi-daisy/Psi-%{version}/psi-%{version}-daisy-%{_rev}-src.zip
-# Source0-md5:	fec5db067396d1bc1781b1b0149e559b
+Source0:	http://uaznia.net/psi-daisy/Psi-%{version}/psi-%{version}-daisy-%{_rev}-src.rar
+# Source0-md5:	4c03f9ba109d1771e254305c9416d707
 Patch0:		%{name}-configure_fix.patch
 URL:		http://psi-daisy.uaznia.net/
 BuildRequires:	Qt3Support-devel
@@ -23,8 +23,7 @@ BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
 BuildRequires:	qt4-qmake
-#BuildRequires:	unrar
-BuildRequires:	unzip
+BuildRequires:	unrar
 BuildRequires:	xorg-lib-libX11-devel
 BuildRequires:	xorg-proto-scrnsaverproto-devel
 BuildRequires:	zlib-devel
@@ -51,7 +50,8 @@ poszukiwane w katalogu $DATADIR/certs lub ~/.psi/certs.
 psi-daisy to prywatna modyfikacja Michała Jazłowieckiego.
 
 %prep
-%setup -q -c
+%setup -q -T -c
+unrar x %{SOURCE0}
 %patch0 -p1
 rm -rf third-party
 
