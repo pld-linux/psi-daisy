@@ -19,6 +19,7 @@ BuildRequires:	QtXml-devel
 BuildRequires:	aspell-devel
 BuildRequires:	libstdc++-devel
 BuildRequires:	openssl-devel >= 0.9.7c
+BuildRequires:	python-devel >= 2.3.0
 BuildRequires:	qca-devel >= 2.0.0
 BuildRequires:	qt4-build
 BuildRequires:	qt4-linguist
@@ -74,7 +75,6 @@ done
 cd ../../..
 
 cd lang
-
 lrelease-qt4 *.ts
 
 %install
