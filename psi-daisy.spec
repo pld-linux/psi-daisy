@@ -1,5 +1,5 @@
 # TODO: %lang() for *.qm files
-%define _rev 20080417
+%define _rev 20080517
 Summary:	Psi-Daisy - Jabber client
 Summary(pl.UTF-8):	Psi-Daisy - klient Jabbera
 Name:		psi-daisy
@@ -8,7 +8,7 @@ Release:	0.6.%{_rev}.0
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://uaznia.net/psi-daisy/Psi-%{version}/psi-%{version}-daisy-%{_rev}-src.rar
-# Source0-md5:	4c03f9ba109d1771e254305c9416d707
+# Source0-md5:	0fc3902e18aacc1e0a4dddd2eb951fa3
 Patch0:		%{name}-configure_fix.patch
 URL:		http://psi-daisy.uaznia.net/
 BuildRequires:	Qt3Support-devel
