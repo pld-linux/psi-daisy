@@ -1,5 +1,5 @@
-# TODO: %lang() for *.qm files
-%define _rev 20080517
+# TODO: subpackages compatible with psi.spec
+%define _rev 20080601
 Summary:	Psi-Daisy - Jabber client
 Summary(pl.UTF-8):	Psi-Daisy - klient Jabbera
 Name:		psi-daisy
@@ -8,7 +8,7 @@ Release:	0.6.%{_rev}.0
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://uaznia.net/psi-daisy/Psi-%{version}/psi-%{version}-daisy-%{_rev}-src.rar
-# Source0-md5:	0fc3902e18aacc1e0a4dddd2eb951fa3
+# Source0-md5:	03b5c8c03707ebb92e51edab8cb527e3
 Patch0:		%{name}-configure_fix.patch
 URL:		http://psi-daisy.uaznia.net/
 BuildRequires:	Qt3Support-devel
@@ -99,7 +99,29 @@ rm -rf $RPM_BUILD_ROOT
 %doc INSTALL README
 %attr(755,root,root) %{_bindir}/*
 %dir %{_datadir}/psi
-%{_datadir}/psi/*.qm
+%lang(ar) %{_datadir}/psi/*_ar.qm
+%lang(ca) %{_datadir}/psi/*_ca.qm
+%lang(cs) %{_datadir}/psi/*_cs.qm
+%lang(da) %{_datadir}/psi/*_da.qm
+%lang(de) %{_datadir}/psi/*_de.qm
+%lang(el) %{_datadir}/psi/*_el.qm
+%lang(eo) %{_datadir}/psi/*_eo.qm
+%lang(es) %{_datadir}/psi/*_es.qm
+%lang(fi) %{_datadir}/psi/*_fi.qm
+%lang(fr) %{_datadir}/psi/*_fr.qm
+%lang(it) %{_datadir}/psi/*_it.qm
+%lang(jp) %{_datadir}/psi/*_jp.qm
+%lang(mk) %{_datadir}/psi/*_mk.qm
+%lang(nl) %{_datadir}/psi/*_nl.qm
+%lang(pl) %{_datadir}/psi/*_pl.qm
+%lang(pt_BR) %{_datadir}/psi/*_ptbr.qm
+%lang(pt) %{_datadir}/psi/*_pt.qm
+%lang(ru) %{_datadir}/psi/*_ru.qm
+%lang(se) %{_datadir}/psi/*_se.qm
+%lang(sk) %{_datadir}/psi/*_sk.qm
+%lang(sr) %{_datadir}/psi/*_sr.qm
+%lang(uk) %{_datadir}/psi/*_uk.qm
+%lang(zh) %{_datadir}/psi/*_zh.qm
 %{_datadir}/psi/certs
 %{_datadir}/psi/iconsets
 %{_datadir}/psi/sound
