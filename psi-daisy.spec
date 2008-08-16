@@ -1,5 +1,5 @@
 # TODO: subpackages compatible with psi.spec
-%define _rev 20080601
+%define _rev 20080731
 Summary:	Psi-Daisy - Jabber client
 Summary(pl.UTF-8):	Psi-Daisy - klient Jabbera
 Name:		psi-daisy
@@ -8,7 +8,7 @@ Release:	0.6.%{_rev}.0
 License:	GPL v2
 Group:		Applications/Communications
 Source0:	http://uaznia.net/psi-daisy/Psi-%{version}/psi-%{version}-daisy-%{_rev}-src.rar
-# Source0-md5:	03b5c8c03707ebb92e51edab8cb527e3
+# Source0-md5:	4357bcf24c1cf2bcf286fde31d567a6c
 Patch0:		%{name}-configure_fix.patch
 URL:		http://psi-daisy.uaznia.net/
 BuildRequires:	Qt3Support-devel
@@ -55,6 +55,9 @@ psi-daisy to prywatna modyfikacja Michała Jazłowieckiego.
 unrar x %{SOURCE0}
 %patch0 -p1
 rm -rf third-party
+
+# temporary hack
+%{__sed} -i 's/#include "timeserver.h"/#include "common.h"\n#include "timeserver.h"/' src/timeserver.cpp
 
 %build
 chmod +x ./configure
