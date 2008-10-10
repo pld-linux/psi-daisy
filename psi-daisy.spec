@@ -58,6 +58,7 @@ rm -rf third-party
 
 # temporary hack
 %{__sed} -i 's/#include "timeserver.h"/#include "common.h"\n#include "timeserver.h"/' src/timeserver.cpp
+%{__sed} -i 's/PYTHON_PATH = \/usr\/include\/python2.5\//PYTHON_PATH = \/usr\/include\/python%py_ver\//' src/plugins/generic/python/pythonplugin.pro
 
 %build
 chmod +x ./configure
