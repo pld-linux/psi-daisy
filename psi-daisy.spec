@@ -53,7 +53,7 @@ psi-daisy to prywatna modyfikacja Michała Jazłowieckiego.
 %prep
 %setup -q -T -c
 unrar x %{SOURCE0}
-%patch0 -p1
+%patch -P0 -p1
 rm -rf third-party
 
 # temporary hack
